@@ -20,18 +20,18 @@ const newPerson = function(firstName = 'Anonymous', lastName = 'Person', age, ma
     getFullName: function(){
       return `${this.firstName} ${this.lastName}`
     },
-    marry: function(person){
+    marry: function(person2){
       this.married = true
-      person.married = true
-      this.spouseName = person.getFullName()
-      person.spouseName = this.getFullName()
+      person2.married = true
+      this.spouseName = person2.getFullName()
+      person2.spouseName = this.getFullName()
     },
 
-    divorce: function(person){
+    divorce: function(person2){
       this.married = false
       delete this.spouseName
-      person.married = false
-      delete person.spouseName
+      person2.married = false
+      delete person2.spouseName
     }
   };
 return newObj;
